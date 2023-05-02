@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply text-zinc-200;
+  @apply bg-zinc-800;
+}
+
+@layer base {
+  html {
+    font-family: Inter, 'sans-serif';
+  }
+}
