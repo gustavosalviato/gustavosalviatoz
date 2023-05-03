@@ -4,6 +4,9 @@ import { Header } from '@/components/Header'
 import { Heading } from '@/components/Heading'
 import { ListSocialMedia } from '@/components/ListSocialMedia'
 import { SelfPresentation } from '@/components/SelfPresentation'
+import Link from 'next/link'
+
+import { CaretRight } from 'phosphor-react'
 
 export default function Home() {
   return (
@@ -66,6 +69,13 @@ export default function Home() {
               <ListSocialMedia />
             </AnimateSection>
           </article>
+
+          <Link
+            href="/works"
+            className="flex items-center justify-center gap-2 bg-teal-500 text-zinc-800 rounded-md text-lg font-semibold px-4 h-12 hover:brightness-90 transition-all duration-300 mx-auto my-3 w-fit"
+          >
+            My portfolio <CaretRight size={20} />
+          </Link>
         </section>
       </main>
 
