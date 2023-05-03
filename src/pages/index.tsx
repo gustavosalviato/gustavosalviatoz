@@ -23,11 +23,8 @@ export default function Home() {
               <Heading title="Work" />
 
               <p className="mt-2 text-zinc-300 leading-relaxed text-indent indent-4">
-                Borem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-                vulputate libero et velit interdum, ac aliquet odio mattis.
-                Class aptent taciti sociosqu ad litora torquent per conubia
-                nostra, per inceptos himenaeos. Curabitur tempus urna at turpis
-                condimentum lobortis. Ut commodo efficitur neque.
+                Since he was a little boy, Gustavo has always been fond of
+                technology and its power to transform lives and solve problems.
               </p>
             </AnimateSection>
 
