@@ -3,7 +3,7 @@ import { NavLink } from './NavLink'
 import { SunDim, List } from 'phosphor-react'
 export function Header() {
   return (
-    <header className="w-full sticky top-[0px] z-[998]">
+    <header className="w-full sticky top-[0px] z-[998] bg-[rgba(39,39,42,0.4)] backdrop-blur-md">
       <div className="max-w-lg w-full mx-auto h-14 p-2 flex justify-between">
         <div className="flex gap-6">
           <Logo />
