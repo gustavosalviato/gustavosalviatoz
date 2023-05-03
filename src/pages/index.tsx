@@ -51,7 +51,7 @@ export default function Home() {
 
               <div className="flex">
                 <span className="font-bold mr-3">2023 to present</span>
-                Working on Meu IOT Group
+                Working on Meu IOT
               </div>
             </AnimateSection>
 
