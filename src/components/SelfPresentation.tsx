@@ -1,3 +1,6 @@
+import ProfileImg from '../assets/images/profile.jpeg'
+
+import Image from 'next/image'
 export function SelfPresentation() {
   return (
     <div className="flex justify-between">
@@ -7,10 +10,13 @@ export function SelfPresentation() {
       </div>
 
       <div>
-        <img
-          src="https://github.com/gustavosalviato.png"
+        <Image
+          src={ProfileImg}
           className="h-24 w-24 rounded-full"
+          width={96}
+          height={96}
           alt=""
+          quality={100}
         />
       </div>
     </div>
