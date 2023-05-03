@@ -1,4 +1,5 @@
 import { AnimateSection } from '@/components/AnimateSection'
+import { Footer } from '@/components/Footer'
 import { Header } from '@/components/Header'
 import { Heading } from '@/components/Heading'
 import { ListSocialMedia } from '@/components/ListSocialMedia'
@@ -70,6 +71,8 @@ export default function Home() {
           </article>
         </section>
       </main>
+
+      <Footer />
     </div>
   )
 }
