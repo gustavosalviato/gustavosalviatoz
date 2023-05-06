@@ -1,0 +1,11 @@
+query GetWorks {
+  works {
+    id
+    title
+    slug
+    description
+    url {
+      url
+    }
+  }
+}
