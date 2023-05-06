@@ -1,6 +1,7 @@
 import { ApolloClient, InMemoryCache } from '@apollo/client'
+import { graphCmsAPI } from '../constants/graphcms'
 
 export const client = new ApolloClient({
-  uri: process.env.HYGRAPH_CONTENT_API,
+  uri: graphCmsAPI,
   cache: new InMemoryCache(),
 })
