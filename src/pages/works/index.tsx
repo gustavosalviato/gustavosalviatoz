@@ -3,16 +3,11 @@ import { Header } from '@/components/Header'
 import { Heading } from '@/components/Heading'
 import { ListWorks } from './components/ListWorks'
 import { Footer } from '@/components/Footer'
+import { useGetWorksQuery } from '@/graphql/generated'
 
 export default function Works() {
-  const data = [
-    {
-      url: 'teste',
-      description:
-        'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis repellat quam eligendi nobis? Ratione eaque sit dolore et culpa iste!',
-      title: 'Pennywise',
-    },
-  ]
+  const { data } = useGetWorksQuery()
+
   return (
     <div className="flex flex-col h-screen w-screen overflow-x-auto">
       <Header />
@@ -22,7 +17,7 @@ export default function Works() {
           <Heading title="Works" />
 
           <AnimateSection delay={0.2}>
-            <ListWorks data={data} />
+            <ListWorks works={data} />
           </AnimateSection>
         </section>
       </main>

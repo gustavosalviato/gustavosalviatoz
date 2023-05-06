@@ -1,22 +1,20 @@
 import { WorkItem } from '@/components/WorkItem'
+import { GetWorksQuery } from '@/graphql/generated'
 
 interface ListWorksProps {
-  data: Array<{
-    url: string
-    title: string
-    description: string
-  }>
+  works: GetWorksQuery | undefined
 }
 
-export function ListWorks({ data }: ListWorksProps) {
+export function ListWorks({ works }: ListWorksProps) {
   return (
     <div className="grid grid-cols-2 mt-4 gap-4">
-      {data.map((item) => (
+      {works?.works.map((work) => (
         <WorkItem
-          key={item.url}
-          url={item.url}
-          description={item.description}
-          title={item.title}
+          slug={work.slug}
+          key={work.id}
+          url={work?.url?.url}
+          description={work.description}
+          title={work.title}
         />
       ))}
     </div>
