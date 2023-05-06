@@ -25,7 +25,7 @@ export default function Home() {
             <AnimateSection delay={0.1}>
               <Heading title="Work" />
 
-              <p className="mt-2 text-zinc-300 leading-relaxed text-indent indent-4">
+              <p className="mt-2 text-zinc-300 leading-relaxed indent-4">
                 Since he was a little boy, Gustavo has always been fond of
                 technology and its power to transform lives and solve problems.
               </p>
