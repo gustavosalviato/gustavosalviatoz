@@ -24,7 +24,9 @@ export function WorkItem({ title, url, description, slug }: WorkItemProps) {
 
         <h3 className="font-bold text-lg  mt-3 leading-tight">{title}</h3>
 
-        <p className="text-zinc-300 leading-relaxed mt-2">{description}</p>
+        <p className="text-zinc-300 leading-relaxed mt-2">
+          {`${description.substring(0, 140)}...`}
+        </p>
       </div>
     </Link>
   )
