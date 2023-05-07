@@ -26,7 +26,7 @@ export default function Work() {
             <div className="flex items-center">
               <Link
                 href="/works"
-                className="h-full text-teal-500 hover:underline transition-colors duration-300 hover:text-teal-500/80"
+                className="h-full dark:text-teal-500 text-red-600 hover:text-red-600/80 hover:underline transition-colors duration-300 dark:hover:text-teal-500/80"
               >
                 Works
               </Link>
@@ -36,7 +36,7 @@ export default function Work() {
 
               <h3 className="inline-block font-bold text-lg">
                 {data?.work?.title}
-                <span className="text-xs p-0.5 rounded-sm bg-zinc-600 self-start ml-2">
+                <span className="text-xs p-0.5 rounded-sm dark:bg-zinc-600 self-start ml-2 bg-light-50">
                   {`${new Date(data?.work?.createdAt)
                     .getFullYear()
                     .toString()} -`}
@@ -44,7 +44,7 @@ export default function Work() {
               </h3>
             </div>
 
-            <p className="text-zinc-300 indent-4 leading-relaxed mt-2 text-justify">
+            <p className="dark:text-zinc-300 indent-4 leading-relaxed mt-2 text-justify">
               {data?.work?.description}
             </p>
 
@@ -56,7 +56,7 @@ export default function Work() {
                 <Link
                   href="https://bookfinder-nu.vercel.app/"
                   target="_blank"
-                  className="text-teal-500 transition-colors duration-300 hover:text-teal-500/80 hover:underline"
+                  className="dark:text-teal-500 dark:hover:text-teal-500/80 text-red-600 hover:text-red-600/80 transition-colors duration-300 hover:underline"
                 >
                   {data?.work?.website}
                 </Link>
@@ -70,7 +70,7 @@ export default function Work() {
               </li>
 
               <li className="flex items-center gap-2">
-                <span className="uppercase font-bold text-indigo-500 rounded-sm text-xs bg-indigo-500/30 p-1">
+                <span className="uppercase font-bold dark:text-indigo-500 dark:bg-indigo-500/30 rounded-sm text-xs  p-1">
                   stack
                 </span>
                 {data?.work?.stack}

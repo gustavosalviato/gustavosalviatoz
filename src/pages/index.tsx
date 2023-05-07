@@ -17,7 +17,7 @@ export default function Home() {
 
         <main className="max-w-lg w-full flex flex-col mx-auto">
           <section>
-            <div className="rounded-md bg-zinc-700 p-3 mt-6 text-center">
+            <div className="rounded-md dark:bg-zinc-700 bg-light-150 p-3 mt-6 text-center">
               Hey you, I'm full stack developer at Brazil!
             </div>
 
@@ -27,7 +27,7 @@ export default function Home() {
               <AnimateSection delay={0.1}>
                 <Heading title="Work" />
 
-                <p className="mt-2 text-zinc-300 leading-relaxed indent-4">
+                <p className="mt-2 dark:text-zinc-300 leading-relaxed indent-4">
                   Since he was a little boy, Gustavo has always been fond of
                   technology and its power to transform lives and solve
                   problems.
@@ -61,7 +61,7 @@ export default function Home() {
               <AnimateSection delay={0.3}>
                 <Heading title="I ♥" />
 
-                <p className="text-zinc-300 mt-2">
+                <p className="dark:text-zinc-300 mt-2">
                   Music, Photography, Playing Ukulele, Counter Strike
                 </p>
               </AnimateSection>

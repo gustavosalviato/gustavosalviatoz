@@ -32,7 +32,6 @@ export function ActiveLink({
           'p-1 h-full flex items-center justify-center hover:underline transition-colors duration-300',
           {
             'text-teal-500 font-bold hover:text-teal-600': active,
-            'hover:text-zinc-300': !active,
           },
         )}
       >
