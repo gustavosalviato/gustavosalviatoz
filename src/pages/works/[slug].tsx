@@ -1,8 +1,20 @@
 import { Footer } from '@/components/Footer'
 import { Header } from '@/components/Header'
-import Link from 'next/link'
 import { CaretRight } from 'phosphor-react'
+import { useRouter } from 'next/router'
+import Link from 'next/link'
+import { useGetWorkBySlugQuery } from '@/graphql/generated'
+
 export default function Work() {
+  const { query } = useRouter()
+
+  const slug = query?.slug
+  const { data } = useGetWorkBySlugQuery({
+    variables: {
+      slug: slug as string,
+    },
+  })
+
   return (
     <div className="h-screen w-screen flex flex-col overflow-x-hidden">
       <Header />
@@ -21,17 +33,17 @@ export default function Work() {
             </span>
 
             <h3 className="inline-block font-bold text-lg">
-              Bookfinder
+              {data?.work?.title}
               <span className="text-xs p-0.5 rounded-sm bg-zinc-600 self-start ml-2">
-                2016
+                {`${new Date(data?.work?.createdAt)
+                  .getFullYear()
+                  .toString()} -`}
               </span>
             </h3>
           </div>
 
           <p className="text-zinc-300 indent-4 leading-relaxed mt-2 text-justify">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet
-            laboriosam distinctio dolorum consequatur totam possimus quisquam
-            nemo quos quidem asperiores.
+            {data?.work?.description}
           </p>
 
           <ul className="flex flex-col p-4 space-y-2">
@@ -40,11 +52,11 @@ export default function Work() {
                 website
               </span>
               <Link
-                href="bookfinder-nu.vercel.app"
+                href="https://bookfinder-nu.vercel.app/"
                 target="_blank"
                 className="text-teal-500 transition-colors duration-300 hover:text-teal-500/80 hover:underline"
               >
-                bookfinder-nu.vercel.app
+                {data?.work?.website}
               </Link>
             </li>
 
@@ -52,14 +64,14 @@ export default function Work() {
               <span className="uppercase font-bold text-indigo-500 rounded-sm text-xs bg-indigo-500/30 p-1">
                 platform
               </span>
-              Windows/macOS/Linux/Android/IOS
+              {data?.work?.platform}
             </li>
 
             <li className="flex items-center gap-2">
               <span className="uppercase font-bold text-indigo-500 rounded-sm text-xs bg-indigo-500/30 p-1">
                 stack
               </span>
-              Next.Js | Tailwind | GraphQL | NextAuth
+              {data?.work?.stack}
             </li>
           </ul>
 

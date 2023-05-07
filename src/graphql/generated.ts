@@ -2972,12 +2972,14 @@ export type Work = Node & {
   history: Array<Version>;
   /** The unique identifier */
   id: Scalars['ID'];
+  platform?: Maybe<Scalars['String']>;
   /** The time the document was published. Null on documents in draft stage. */
   publishedAt?: Maybe<Scalars['DateTime']>;
   /** User that last published this document */
   publishedBy?: Maybe<User>;
   scheduledIn: Array<ScheduledOperation>;
   slug: Scalars['String'];
+  stack?: Maybe<Scalars['String']>;
   /** System stage field */
   stage: Stage;
   title: Scalars['String'];
@@ -2986,6 +2988,7 @@ export type Work = Node & {
   /** User that last updated this document */
   updatedBy?: Maybe<User>;
   url?: Maybe<Asset>;
+  website?: Maybe<Scalars['String']>;
 };
 
 
@@ -3058,10 +3061,13 @@ export type WorkConnection = {
 export type WorkCreateInput = {
   createdAt?: InputMaybe<Scalars['DateTime']>;
   description: Scalars['String'];
+  platform?: InputMaybe<Scalars['String']>;
   slug: Scalars['String'];
+  stack?: InputMaybe<Scalars['String']>;
   title: Scalars['String'];
   updatedAt?: InputMaybe<Scalars['DateTime']>;
   url?: InputMaybe<AssetCreateOneInlineInput>;
+  website?: InputMaybe<Scalars['String']>;
 };
 
 export type WorkCreateManyInlineInput = {
@@ -3154,6 +3160,25 @@ export type WorkManyWhereInput = {
   id_not_starts_with?: InputMaybe<Scalars['ID']>;
   /** All values starting with the given string. */
   id_starts_with?: InputMaybe<Scalars['ID']>;
+  platform?: InputMaybe<Scalars['String']>;
+  /** All values containing the given string. */
+  platform_contains?: InputMaybe<Scalars['String']>;
+  /** All values ending with the given string. */
+  platform_ends_with?: InputMaybe<Scalars['String']>;
+  /** All values that are contained in given list. */
+  platform_in?: InputMaybe<Array<InputMaybe<Scalars['String']>>>;
+  /** Any other value that exists and is not equal to the given value. */
+  platform_not?: InputMaybe<Scalars['String']>;
+  /** All values not containing the given string. */
+  platform_not_contains?: InputMaybe<Scalars['String']>;
+  /** All values not ending with the given string */
+  platform_not_ends_with?: InputMaybe<Scalars['String']>;
+  /** All values that are not contained in given list. */
+  platform_not_in?: InputMaybe<Array<InputMaybe<Scalars['String']>>>;
+  /** All values not starting with the given string. */
+  platform_not_starts_with?: InputMaybe<Scalars['String']>;
+  /** All values starting with the given string. */
+  platform_starts_with?: InputMaybe<Scalars['String']>;
   publishedAt?: InputMaybe<Scalars['DateTime']>;
   /** All values greater than the given value. */
   publishedAt_gt?: InputMaybe<Scalars['DateTime']>;
@@ -3192,6 +3217,25 @@ export type WorkManyWhereInput = {
   slug_not_starts_with?: InputMaybe<Scalars['String']>;
   /** All values starting with the given string. */
   slug_starts_with?: InputMaybe<Scalars['String']>;
+  stack?: InputMaybe<Scalars['String']>;
+  /** All values containing the given string. */
+  stack_contains?: InputMaybe<Scalars['String']>;
+  /** All values ending with the given string. */
+  stack_ends_with?: InputMaybe<Scalars['String']>;
+  /** All values that are contained in given list. */
+  stack_in?: InputMaybe<Array<InputMaybe<Scalars['String']>>>;
+  /** Any other value that exists and is not equal to the given value. */
+  stack_not?: InputMaybe<Scalars['String']>;
+  /** All values not containing the given string. */
+  stack_not_contains?: InputMaybe<Scalars['String']>;
+  /** All values not ending with the given string */
+  stack_not_ends_with?: InputMaybe<Scalars['String']>;
+  /** All values that are not contained in given list. */
+  stack_not_in?: InputMaybe<Array<InputMaybe<Scalars['String']>>>;
+  /** All values not starting with the given string. */
+  stack_not_starts_with?: InputMaybe<Scalars['String']>;
+  /** All values starting with the given string. */
+  stack_starts_with?: InputMaybe<Scalars['String']>;
   title?: InputMaybe<Scalars['String']>;
   /** All values containing the given string. */
   title_contains?: InputMaybe<Scalars['String']>;
@@ -3228,6 +3272,25 @@ export type WorkManyWhereInput = {
   updatedAt_not_in?: InputMaybe<Array<InputMaybe<Scalars['DateTime']>>>;
   updatedBy?: InputMaybe<UserWhereInput>;
   url?: InputMaybe<AssetWhereInput>;
+  website?: InputMaybe<Scalars['String']>;
+  /** All values containing the given string. */
+  website_contains?: InputMaybe<Scalars['String']>;
+  /** All values ending with the given string. */
+  website_ends_with?: InputMaybe<Scalars['String']>;
+  /** All values that are contained in given list. */
+  website_in?: InputMaybe<Array<InputMaybe<Scalars['String']>>>;
+  /** Any other value that exists and is not equal to the given value. */
+  website_not?: InputMaybe<Scalars['String']>;
+  /** All values not containing the given string. */
+  website_not_contains?: InputMaybe<Scalars['String']>;
+  /** All values not ending with the given string */
+  website_not_ends_with?: InputMaybe<Scalars['String']>;
+  /** All values that are not contained in given list. */
+  website_not_in?: InputMaybe<Array<InputMaybe<Scalars['String']>>>;
+  /** All values not starting with the given string. */
+  website_not_starts_with?: InputMaybe<Scalars['String']>;
+  /** All values starting with the given string. */
+  website_starts_with?: InputMaybe<Scalars['String']>;
 };
 
 export enum WorkOrderByInput {
@@ -3237,21 +3300,30 @@ export enum WorkOrderByInput {
   DescriptionDesc = 'description_DESC',
   IdAsc = 'id_ASC',
   IdDesc = 'id_DESC',
+  PlatformAsc = 'platform_ASC',
+  PlatformDesc = 'platform_DESC',
   PublishedAtAsc = 'publishedAt_ASC',
   PublishedAtDesc = 'publishedAt_DESC',
   SlugAsc = 'slug_ASC',
   SlugDesc = 'slug_DESC',
+  StackAsc = 'stack_ASC',
+  StackDesc = 'stack_DESC',
   TitleAsc = 'title_ASC',
   TitleDesc = 'title_DESC',
   UpdatedAtAsc = 'updatedAt_ASC',
-  UpdatedAtDesc = 'updatedAt_DESC'
+  UpdatedAtDesc = 'updatedAt_DESC',
+  WebsiteAsc = 'website_ASC',
+  WebsiteDesc = 'website_DESC'
 }
 
 export type WorkUpdateInput = {
   description?: InputMaybe<Scalars['String']>;
+  platform?: InputMaybe<Scalars['String']>;
   slug?: InputMaybe<Scalars['String']>;
+  stack?: InputMaybe<Scalars['String']>;
   title?: InputMaybe<Scalars['String']>;
   url?: InputMaybe<AssetUpdateOneInlineInput>;
+  website?: InputMaybe<Scalars['String']>;
 };
 
 export type WorkUpdateManyInlineInput = {
@@ -3273,7 +3345,10 @@ export type WorkUpdateManyInlineInput = {
 
 export type WorkUpdateManyInput = {
   description?: InputMaybe<Scalars['String']>;
+  platform?: InputMaybe<Scalars['String']>;
+  stack?: InputMaybe<Scalars['String']>;
   title?: InputMaybe<Scalars['String']>;
+  website?: InputMaybe<Scalars['String']>;
 };
 
 export type WorkUpdateManyWithNestedWhereInput = {
@@ -3392,6 +3467,25 @@ export type WorkWhereInput = {
   id_not_starts_with?: InputMaybe<Scalars['ID']>;
   /** All values starting with the given string. */
   id_starts_with?: InputMaybe<Scalars['ID']>;
+  platform?: InputMaybe<Scalars['String']>;
+  /** All values containing the given string. */
+  platform_contains?: InputMaybe<Scalars['String']>;
+  /** All values ending with the given string. */
+  platform_ends_with?: InputMaybe<Scalars['String']>;
+  /** All values that are contained in given list. */
+  platform_in?: InputMaybe<Array<InputMaybe<Scalars['String']>>>;
+  /** Any other value that exists and is not equal to the given value. */
+  platform_not?: InputMaybe<Scalars['String']>;
+  /** All values not containing the given string. */
+  platform_not_contains?: InputMaybe<Scalars['String']>;
+  /** All values not ending with the given string */
+  platform_not_ends_with?: InputMaybe<Scalars['String']>;
+  /** All values that are not contained in given list. */
+  platform_not_in?: InputMaybe<Array<InputMaybe<Scalars['String']>>>;
+  /** All values not starting with the given string. */
+  platform_not_starts_with?: InputMaybe<Scalars['String']>;
+  /** All values starting with the given string. */
+  platform_starts_with?: InputMaybe<Scalars['String']>;
   publishedAt?: InputMaybe<Scalars['DateTime']>;
   /** All values greater than the given value. */
   publishedAt_gt?: InputMaybe<Scalars['DateTime']>;
@@ -3430,6 +3524,25 @@ export type WorkWhereInput = {
   slug_not_starts_with?: InputMaybe<Scalars['String']>;
   /** All values starting with the given string. */
   slug_starts_with?: InputMaybe<Scalars['String']>;
+  stack?: InputMaybe<Scalars['String']>;
+  /** All values containing the given string. */
+  stack_contains?: InputMaybe<Scalars['String']>;
+  /** All values ending with the given string. */
+  stack_ends_with?: InputMaybe<Scalars['String']>;
+  /** All values that are contained in given list. */
+  stack_in?: InputMaybe<Array<InputMaybe<Scalars['String']>>>;
+  /** Any other value that exists and is not equal to the given value. */
+  stack_not?: InputMaybe<Scalars['String']>;
+  /** All values not containing the given string. */
+  stack_not_contains?: InputMaybe<Scalars['String']>;
+  /** All values not ending with the given string */
+  stack_not_ends_with?: InputMaybe<Scalars['String']>;
+  /** All values that are not contained in given list. */
+  stack_not_in?: InputMaybe<Array<InputMaybe<Scalars['String']>>>;
+  /** All values not starting with the given string. */
+  stack_not_starts_with?: InputMaybe<Scalars['String']>;
+  /** All values starting with the given string. */
+  stack_starts_with?: InputMaybe<Scalars['String']>;
   title?: InputMaybe<Scalars['String']>;
   /** All values containing the given string. */
   title_contains?: InputMaybe<Scalars['String']>;
@@ -3466,6 +3579,25 @@ export type WorkWhereInput = {
   updatedAt_not_in?: InputMaybe<Array<InputMaybe<Scalars['DateTime']>>>;
   updatedBy?: InputMaybe<UserWhereInput>;
   url?: InputMaybe<AssetWhereInput>;
+  website?: InputMaybe<Scalars['String']>;
+  /** All values containing the given string. */
+  website_contains?: InputMaybe<Scalars['String']>;
+  /** All values ending with the given string. */
+  website_ends_with?: InputMaybe<Scalars['String']>;
+  /** All values that are contained in given list. */
+  website_in?: InputMaybe<Array<InputMaybe<Scalars['String']>>>;
+  /** Any other value that exists and is not equal to the given value. */
+  website_not?: InputMaybe<Scalars['String']>;
+  /** All values not containing the given string. */
+  website_not_contains?: InputMaybe<Scalars['String']>;
+  /** All values not ending with the given string */
+  website_not_ends_with?: InputMaybe<Scalars['String']>;
+  /** All values that are not contained in given list. */
+  website_not_in?: InputMaybe<Array<InputMaybe<Scalars['String']>>>;
+  /** All values not starting with the given string. */
+  website_not_starts_with?: InputMaybe<Scalars['String']>;
+  /** All values starting with the given string. */
+  website_starts_with?: InputMaybe<Scalars['String']>;
 };
 
 /** The document in stages filter allows specifying a stage entry to cross compare the same document between different stages */
@@ -3574,12 +3706,61 @@ export enum _SystemDateTimeFieldVariation {
   Localization = 'localization'
 }
 
+export type GetWorkBySlugQueryVariables = Exact<{
+  slug: Scalars['String'];
+}>;
+
+
+export type GetWorkBySlugQuery = { __typename?: 'Query', work?: { __typename?: 'Work', id: string, slug: string, title: string, description: string, stack?: string | null, platform?: string | null, website?: string | null, createdAt: any } | null };
+
 export type GetWorksQueryVariables = Exact<{ [key: string]: never; }>;
 
 
 export type GetWorksQuery = { __typename?: 'Query', works: Array<{ __typename?: 'Work', id: string, title: string, slug: string, description: string, url?: { __typename?: 'Asset', url: string } | null }> };
 
 
+export const GetWorkBySlugDocument = gql`
+    query GetWorkBySlug($slug: String!) {
+  work(where: {slug: $slug}) {
+    id
+    slug
+    title
+    description
+    stack
+    platform
+    website
+    createdAt
+  }
+}
+    `;
+
+/**
+ * __useGetWorkBySlugQuery__
+ *
+ * To run a query within a React component, call `useGetWorkBySlugQuery` and pass it any options that fit your needs.
+ * When your component renders, `useGetWorkBySlugQuery` returns an object from Apollo Client that contains loading, error, and data properties
+ * you can use to render your UI.
+ *
+ * @param baseOptions options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
+ *
+ * @example
+ * const { data, loading, error } = useGetWorkBySlugQuery({
+ *   variables: {
+ *      slug: // value for 'slug'
+ *   },
+ * });
+ */
+export function useGetWorkBySlugQuery(baseOptions: Apollo.QueryHookOptions<GetWorkBySlugQuery, GetWorkBySlugQueryVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useQuery<GetWorkBySlugQuery, GetWorkBySlugQueryVariables>(GetWorkBySlugDocument, options);
+      }
+export function useGetWorkBySlugLazyQuery(baseOptions?: Apollo.LazyQueryHookOptions<GetWorkBySlugQuery, GetWorkBySlugQueryVariables>) {
+          const options = {...defaultOptions, ...baseOptions}
+          return Apollo.useLazyQuery<GetWorkBySlugQuery, GetWorkBySlugQueryVariables>(GetWorkBySlugDocument, options);
+        }
+export type GetWorkBySlugQueryHookResult = ReturnType<typeof useGetWorkBySlugQuery>;
+export type GetWorkBySlugLazyQueryHookResult = ReturnType<typeof useGetWorkBySlugLazyQuery>;
+export type GetWorkBySlugQueryResult = Apollo.QueryResult<GetWorkBySlugQuery, GetWorkBySlugQueryVariables>;
 export const GetWorksDocument = gql`
     query GetWorks {
   works {
