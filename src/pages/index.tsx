@@ -18,7 +18,7 @@ export default function Home() {
         <main className="max-w-lg w-full flex flex-col mx-auto">
           <section>
             <div className="rounded-md dark:bg-zinc-700 bg-light-150 p-3 mt-6 text-center">
-              Hey you, I'm full stack developer at Brazil!
+              Hey you, I'm front-end developer at Brazil!
             </div>
 
             <article className="mt-12">
@@ -62,7 +62,7 @@ export default function Home() {
                 <Heading title="I ♥" />
 
                 <p className="dark:text-zinc-300 mt-2">
-                  Music, Photography, Playing Ukulele, Counter Strike
+                  Music, Photography, Running, Counter Strike
                 </p>
               </AnimateSection>
 

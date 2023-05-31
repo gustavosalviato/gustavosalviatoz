@@ -8,7 +8,7 @@ export function SelfPresentation() {
         <h2 className="font-bold text-3xl leading-tight tracking-tighter">
           Gustavo Salviato
         </h2>
-        <p>full stack javascript developer</p>
+        <p>front-end developer javascript developer</p>
       </div>
 
       <div>

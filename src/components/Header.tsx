@@ -14,11 +14,10 @@ export function Header() {
           <NavLink />
         </div>
 
-        <div
-          onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-          className="flex items-center gap-2"
-        >
-          <ThemeButton />
+        <div className="flex items-center gap-2">
+          <div onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}>
+            <ThemeButton />
+          </div>
 
           <button className="md:hidden flex items-center justify-center h-10 w-10 rounded-md bg-zinc-700 border border-zinc-500 transition-colors duration-300 hover:bg-zinc-600">
             <List size={16} className="text-zinc-900" weight="bold" />
