@@ -11,4 +11,10 @@
   html {
     font-family: Inter, 'sans-serif';
   }
+
+  :focus {
+    outline: 0;
+    box-shadow: 0 0 0 2px #27272A;
+    border-radius: 4px;
+}
 }
