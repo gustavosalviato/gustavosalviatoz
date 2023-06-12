@@ -76,20 +76,6 @@ export default function Work() {
                 {data?.work?.stack}
               </li>
             </ul>
-
-            <div className="flex flex-col gap-6 items-center justify-center mt-6">
-              <img
-                src="https://source.unsplash.com/random/?book"
-                alt=""
-                className="w-full h-full object-contain transition-all duration-300 hover:scale-105 hover:rotate-1"
-              />
-
-              <img
-                src="https://source.unsplash.com/random/?street"
-                alt=""
-                className="w-full h-full object-contain transition-all duration-300 hover:scale-105 hover:rotate-1"
-              />
-            </div>
           </section>
         </main>
 
