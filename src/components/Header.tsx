@@ -9,7 +9,10 @@ export function Header() {
   const { theme, setTheme } = useTheme()
 
   return (
-    <header className="w-full sticky top-[0px] z-[998] dark:bg-[rgba(39,39,42,0.4)] bg-light-50 backdrop-blur-md">
+    <header
+      className="w-full sticky top-[0px] z-[998] dark:bg-[rgba(39,39,42,0.4)] bg-light-50 backdrop-blur-md"
+      data-cy="header"
+    >
       <div className="max-w-lg w-full mx-auto h-14 p-2 flex justify-between">
         <div className="flex gap-6">
           <Logo />

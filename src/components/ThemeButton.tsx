@@ -19,6 +19,7 @@ export function ThemeButton() {
       onClick={handleToggleTheme}
       type="button"
       className="flex items-center justify-center h-10 w-10 rounded-md   transition-colors duration-300 dark:bg-purple-400 dark:hover:bg-purple-400/80 bg-yellow-500 hover:bg-yellow-500/80"
+      data-cy="theme-button"
     >
       {theme === 'dark' && (
         <Moon size={16} weight="fill" className="text-white" />

@@ -8,6 +8,7 @@ interface ActiveLinkProps extends LinkProps {
   href: string
   target?: '_blank' | '_self'
   icon?: boolean
+  id?: string
 }
 
 export function ActiveLink({
@@ -15,6 +16,7 @@ export function ActiveLink({
   title,
   target = '_self',
   icon = false,
+  id,
   ...props
 }: ActiveLinkProps) {
   const router = useRouter()
@@ -26,6 +28,7 @@ export function ActiveLink({
       {icon && <GithubLogo size={16} weight="fill" className="text-zinc-900" />}
       <Link
         href={href}
+        id={id}
         target={target}
         {...props}
         className={clsx(

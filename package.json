@@ -7,7 +7,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "codegen": "graphql-codegen"
+    "codegen": "graphql-codegen",
+    "cy:open": "cypress open",
+    "test": "cypress run"
   },
   "dependencies": {
     "@apollo/client": "^3.7.14",
@@ -34,6 +36,7 @@
     "@graphql-codegen/typescript-react-apollo": "^3.3.7",
     "@rocketseat/eslint-config": "^1.2.0",
     "autoprefixer": "^10.4.14",
+    "cypress": "^12.14.0",
     "eslint": "^8.39.0",
     "postcss": "^8.4.23",
     "tailwindcss": "^3.3.2"
