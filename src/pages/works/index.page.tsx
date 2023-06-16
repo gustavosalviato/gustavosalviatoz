@@ -14,7 +14,7 @@ export default function Works() {
       <div className="flex flex-col h-screen w-screen overflow-x-auto">
         <Header />
 
-        <main className="max-w-lg w-full flex flex-col mx-auto">
+        <main className="max-w-lg w-full flex flex-col mx-auto px-4">
           <section className="mt-6">
             <Heading title="Works" />
 
