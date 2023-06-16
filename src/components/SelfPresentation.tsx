@@ -3,12 +3,12 @@ import ProfileImg from '../assets/images/profile.jpeg'
 import Image from 'next/image'
 export function SelfPresentation() {
   return (
-    <div className="flex justify-between">
+    <div className="flex justify-between" data-cy="self-presentation">
       <div>
         <h2 className="font-bold text-3xl leading-tight tracking-tighter">
           Gustavo Salviato
         </h2>
-        <p>front-end developer javascript developer</p>
+        <p>front-end javascript developer</p>
       </div>
 
       <div>

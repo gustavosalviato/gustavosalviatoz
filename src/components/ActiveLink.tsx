@@ -25,8 +25,16 @@ export function ActiveLink({
 
   return (
     <div className="flex items-center gap-1">
-      {icon && <GithubLogo size={16} weight="fill" className="text-zinc-900" />}
+      {icon && (
+        <GithubLogo
+          size={16}
+          weight="fill"
+          className="text-zinc-900"
+          data-cy="active-link-icon"
+        />
+      )}
       <Link
+        data-cy="active-link"
         href={href}
         id={id}
         target={target}

@@ -12,6 +12,7 @@ export function WorkItem({ title, url, description, slug }: WorkItemProps) {
     <Link
       href={`/works/${slug}`}
       className="group bg-transparent p-4 rounded-lg transition-colors duration-300 hover:bg-zinc-500/10"
+      data-cy="work-item"
     >
       <div className="flex flex-col">
         <div className="h-32 w-full">

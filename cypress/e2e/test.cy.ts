@@ -15,6 +15,7 @@ describe('Home page', () => {
     cy.get('[data-cy="source"]').should('be.visible').and('have.text', 'Source')
     cy.get('[data-cy="nav-bar"]').should('be.visible')
     cy.get('[data-cy="theme-button"]').should('be.visible')
+    cy.get('[data-cy="header"]').should('be.visible')
     cy.get('[data-cy="header"]').screenshot()
   })
 })

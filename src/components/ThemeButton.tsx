@@ -1,32 +1,32 @@
+import { useTheme } from 'next-themes'
 import { Moon, SunDim } from 'phosphor-react'
 import { useEffect, useState } from 'react'
 
-type ThemeType = 'dark' | 'light'
-
 export function ThemeButton() {
-  const [theme, setTheme] = useState<ThemeType>()
+  const [isMounted, setIsMounted] = useState(false)
+  const { theme, setTheme } = useTheme()
 
   useEffect(() => {
-    setTheme('dark')
+    setIsMounted(true)
   }, [])
 
-  function handleToggleTheme() {
-    setTheme((prevState) => (prevState === 'dark' ? 'light' : 'dark'))
+  if (!isMounted) {
+    return null
   }
 
   return (
     <button
-      onClick={handleToggleTheme}
+      onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
       type="button"
       className="flex items-center justify-center h-10 w-10 rounded-md   transition-colors duration-300 dark:bg-purple-400 dark:hover:bg-purple-400/80 bg-yellow-500 hover:bg-yellow-500/80"
       data-cy="theme-button"
     >
       {theme === 'dark' && (
-        <Moon size={16} weight="fill" className="text-white" />
+        <SunDim size={16} className="text-zinc-800" weight="bold" />
       )}
 
       {theme === 'light' && (
-        <SunDim size={16} className="text-zinc-800" weight="bold" />
+        <Moon size={16} weight="fill" className="text-white" />
       )}
     </button>
   )
