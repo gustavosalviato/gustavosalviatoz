@@ -54,7 +54,7 @@ export default function Work() {
                   website
                 </span>
                 <Link
-                  href="https://bookfinder-nu.vercel.app/"
+                  href={data?.work?.website!}
                   target="_blank"
                   className="dark:text-teal-500 dark:hover:text-teal-500/80 text-red-600 hover:text-red-600/80 transition-colors duration-300 hover:underline"
                 >
