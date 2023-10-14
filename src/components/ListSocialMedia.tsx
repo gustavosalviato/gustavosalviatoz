@@ -29,7 +29,7 @@ export function ListSocialMedia() {
       <li className="flex mt-2 items-center gap-2  w-fit rounded-md px-4 h-10 bg-transparent hover:bg-teal-200 transition-all duration-300">
         <InstagramLogo size={18} weight="fill" className="text-teal-500" />
         <Link
-          href="https://www.instagram.com/gu.tsx/"
+          href="https://www.instagram.com/gusttavo.tsx/"
           target="_blank"
           className="font-bold text-teal-500"
         >

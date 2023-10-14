@@ -1,5 +1,3 @@
-import ProfileImg from '../assets/images/profile.jpeg'
-
 import Image from 'next/image'
 export function SelfPresentation() {
   return (
@@ -13,7 +11,7 @@ export function SelfPresentation() {
 
       <div>
         <Image
-          src={ProfileImg}
+          src="https://github.com/gustavosalviato.png"
           className="h-24 w-24 rounded-full"
           width={96}
           height={96}
