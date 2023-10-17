@@ -1,4 +1,9 @@
-import { LinkedinLogo, InstagramLogo, GithubLogo } from 'phosphor-react'
+import {
+  LinkedinLogo,
+  InstagramLogo,
+  GithubLogo,
+  Aperture,
+} from 'phosphor-react'
 import Link from 'next/link'
 export function ListSocialMedia() {
   return (
@@ -34,6 +39,17 @@ export function ListSocialMedia() {
           className="font-bold text-teal-500"
         >
           Instagram
+        </Link>
+      </li>
+
+      <li className="flex mt-2 items-center gap-2  w-fit rounded-md px-4 h-10 bg-transparent hover:bg-teal-200 transition-all duration-300">
+        <Aperture size={18} weight="fill" className="text-teal-500" />
+        <Link
+          href="https://vsco.co/weusetobe/gallery"
+          target="_blank"
+          className="font-bold text-teal-500"
+        >
+          VSCO
         </Link>
       </li>
     </ul>

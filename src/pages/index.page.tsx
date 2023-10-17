@@ -63,7 +63,7 @@ export default function Home() {
                   <Heading title="I ♥" />
 
                   <p className="dark:text-zinc-300 mt-2">
-                    Music, Photography, Running, Counter Strike
+                    Hip Hop, Photography, Do exercises, Games
                   </p>
                 </AnimateSection>
 
