@@ -53,13 +53,15 @@ export default function Work() {
                 <span className="uppercase font-bold text-indigo-500 rounded-sm text-xs bg-indigo-500/30 p-1">
                   website
                 </span>
-                <Link
-                  href={data?.work?.website ?? ''}
-                  target="_blank"
-                  className="dark:text-teal-500 dark:hover:text-teal-500/80 text-red-600 hover:text-red-600/80 transition-colors duration-300 hover:underline"
-                >
-                  {data?.work?.website}
-                </Link>
+                {data?.work?.website && (
+                  <Link
+                    target="_blank"
+                    href={data?.work?.website!}
+                    className="dark:text-teal-500 dark:hover:text-teal-500/80 text-red-600 hover:text-red-600/80 transition-colors duration-300 hover:underline"
+                  >
+                    {data?.work?.website}
+                  </Link>
+                )}
               </li>
 
               <li className="flex items-center gap-2">
