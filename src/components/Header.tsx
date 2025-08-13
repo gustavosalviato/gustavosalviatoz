@@ -2,8 +2,9 @@ import { Logo } from './Logo'
 import { NavLink } from './NavLink'
 import { List } from 'phosphor-react'
 import { ThemeButton } from './ThemeButton'
-import * as DropDownMenu from '@radix-ui/react-dropdown-menu'
 import { MenuMobile } from './MenuMobile'
+
+import * as DropDownMenu from '@radix-ui/react-dropdown-menu'
 
 export function Header() {
   return (
@@ -11,7 +12,7 @@ export function Header() {
       className="w-full sticky top-[0px] z-[998] dark:bg-[rgba(39,39,42,0.4)] bg-light-50 backdrop-blur-md"
       data-cy="header"
     >
-      <div className="max-w-lg w-full mx-auto h-14 p-2 flex justify-between">
+      <div className="max-w-2xl w-full mx-auto h-14 p-2 flex justify-between">
         <div className="flex gap-6">
           <Logo />
           <NavLink />

@@ -14,7 +14,7 @@ interface LayoutProps {
 }
 
 export function Layout({ children, title }: LayoutProps) {
-  const pageTitle = `${title} - Gustavo Salviato`
+  const pageTitle = `${title} - Gustavo Henrique`
   return (
     <motion.article
       initial="hidden"

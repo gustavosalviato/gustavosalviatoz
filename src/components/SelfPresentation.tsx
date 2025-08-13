@@ -1,12 +1,13 @@
 import Image from 'next/image'
+
 export function SelfPresentation() {
   return (
     <div className="flex justify-between" data-cy="self-presentation">
       <div>
         <h2 className="font-bold text-3xl leading-tight tracking-tighter">
-          Gustavo Salviato
+          Gustavo Henrique
         </h2>
-        <p>front-end javascript developer</p>
+        <p>Desenvolvedor Full Stack JavaScript</p>
       </div>
 
       <div>

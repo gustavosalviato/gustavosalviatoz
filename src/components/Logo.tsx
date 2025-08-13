@@ -7,7 +7,7 @@ export function Logo() {
       data-cy="logo"
     >
       <GitBranch size={24} />
-      Gustavo Salviato
+      Gustavo Henrique
     </span>
   )
 }
