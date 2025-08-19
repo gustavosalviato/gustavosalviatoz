@@ -57,7 +57,7 @@ export function ListSocialMedia() {
       <div className="border p-4 border-zinc-700 rounded-md space-y-1 flex items-center justify-center gap-2 mt-2 dark:hover:bg-zinc-600 hover:bg-light-150">
         <GameController size={18} weight="fill" />
         <Link
-          href="https://vsco.co/weusetobe/gallery"
+          href="https://steamcommunity.com/profiles/76561199013119564/"
           target="_blank"
           className="font-bold"
         >

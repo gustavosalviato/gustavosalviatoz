@@ -24,7 +24,7 @@ export function Timeline() {
       year: '2025 - Presente',
       title: 'Desenvolvedor Full Stack',
       description:
-        'Atuando como desenvolvedor Full Stack JavaScript/TypeScript ',
+        'Atuando como desenvolvedor Full Stack JavaScript/TypeScript.',
       type: 'work',
     },
   ]
@@ -41,12 +41,12 @@ export function Timeline() {
               )}
             </div>
 
-            <div className="flex-1 pb-8">
+            <div className="flex-1 pb-2">
               <div className="flex items-center gap-3 mb-2">
                 <strong>{item.year}</strong>
                 <h3 className="text-base">{item.title}</h3>
               </div>
-              <p className="text-gray-400">{item.description}</p>
+              <p className="text-sm dark:text-zinc-300">{item.description}</p>
             </div>
           </div>
         ))}

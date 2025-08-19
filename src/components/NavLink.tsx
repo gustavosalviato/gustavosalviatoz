@@ -3,7 +3,7 @@ import { ActiveLink } from './ActiveLink'
 export function NavLink() {
   return (
     <nav className="flex gap-2 max-md:hidden" data-cy="nav-bar">
-      <ActiveLink href="/" title="Home" data-cy="home" />
+      <ActiveLink href="/" title="Sobre" data-cy="home" />
       <ActiveLink href="/works" title="Projetos" data-cy="works" />
       <ActiveLink href="/setup" title="Setup" />
       <ActiveLink

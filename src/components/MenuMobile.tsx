@@ -11,12 +11,17 @@ export function MenuMobile() {
         <div className="">
           <DropDownMenu.Item className="px-3 py-2">
             <Link href="/" data-cy="menu-mobile-link">
-              About
+              Sobre
             </Link>
           </DropDownMenu.Item>
           <DropDownMenu.Item className="px-3 py-2">
             <Link href="/works" data-cy="menu-mobile-link">
-              Works
+              Projetos
+            </Link>
+          </DropDownMenu.Item>
+          <DropDownMenu.Item className="px-3 py-2">
+            <Link href="/setup" data-cy="menu-mobile-link">
+              Setup
             </Link>
           </DropDownMenu.Item>
           <DropDownMenu.Item className="px-3 py-2">
@@ -26,7 +31,7 @@ export function MenuMobile() {
               rel="noreferrer"
               data-cy="menu-mobile-link"
             >
-              View Source
+              Fonte
             </a>
           </DropDownMenu.Item>
         </div>

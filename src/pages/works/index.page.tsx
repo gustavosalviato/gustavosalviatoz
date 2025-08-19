@@ -14,9 +14,9 @@ export default function Works() {
       <div className="flex flex-col h-screen w-screen overflow-x-auto">
         <Header />
 
-        <main className="max-w-lg w-full flex flex-col mx-auto px-4">
+        <main className="max-w-2xl w-full flex flex-col mx-auto px-4">
           <section className="mt-6">
-            <Heading title="Works" />
+            <Heading title="Projetos" />
 
             <AnimateSection delay={0.2}>
               <ListWorks works={data} />
